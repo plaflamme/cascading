@@ -44,6 +44,11 @@ dependencies {
     exclude group: 'ant'
     exclude group: 'junit'
   }
+  compile( group: 'org.apache.hadoop', name: 'hadoop-hdfs', version: hadoopHdfsVersion ) {
+    exclude group: 'ant'
+    exclude group: 'junit'
+    exclude group: 'commons-daemon'
+  }
 }
 
 assemble << {

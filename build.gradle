@@ -46,6 +46,7 @@ repositories {
   mavenCentral()
   mavenRepo name: 'conjars', url: 'http://conjars.org/repo/'
   mavenRepo name: 'apache', url: 'https://repository.apache.org/content/repositories/releases/'
+  mavenRepo name: 'cloudera', url: 'https://repository.cloudera.com/artifactory/cloudera-repos/'
 }
 
 subprojects { subproject ->
@@ -68,6 +69,7 @@ subprojects { subproject ->
       mavenCentral()
       mavenRepo name: 'conjars', url: 'http://conjars.org/repo/'
       mavenRepo name: 'apache', url: 'https://repository.apache.org/content/repositories/releases/'
+      mavenRepo name: 'cloudera', url: 'https://repository.cloudera.com/artifactory/cloudera-repos/'
     }
 
     dependencies {

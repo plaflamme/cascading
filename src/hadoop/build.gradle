@@ -44,9 +44,16 @@ dependencies {
     exclude group: 'ant'
     exclude group: 'junit'
   }
+  compile( group: 'org.apache.hadoop', name: 'hadoop-common', version: hadoopHdfsVersion ) {
+    exclude group: 'ant'
+    exclude group: 'junit'
+    // commons-daemon-1.0.3 pom file is broken
+    exclude group: 'commons-daemon'
+  }
   compile( group: 'org.apache.hadoop', name: 'hadoop-hdfs', version: hadoopHdfsVersion ) {
     exclude group: 'ant'
     exclude group: 'junit'
+    // commons-daemon-1.0.3 pom file is broken
     exclude group: 'commons-daemon'
   }
 }

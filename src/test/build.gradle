@@ -42,6 +42,17 @@ sourceSets {
 dependencies {
   compile group: 'junit', name: 'junit', version: '4.8.+'
   compile group: 'org.apache.hadoop', name: 'hadoop-test', version: hadoopVersion
+  compile( group: 'org.apache.hadoop', name: 'hadoop-minicluster', version: hadoopHdfsVersion)  {
+    // commons-daemon-1.0.3 pom file is broken
+    exclude group: 'commons-daemon'
+  }
+  compile( group: 'org.apache.hadoop', name: 'hadoop-hdfs', version: hadoopHdfsVersion ) {
+    exclude group: 'ant'
+    exclude group: 'junit'
+    // commons-daemon-1.0.3 pom file is broken
+    exclude group: 'commons-daemon'
+  }
+
 }
 
 if( hadoopVersion.startsWith( "1.0." ) )
